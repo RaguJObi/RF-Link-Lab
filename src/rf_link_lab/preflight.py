@@ -92,7 +92,7 @@ def self_test(output: Path | None=None,with_ui: bool=False):
         checks['gui_bench_recording']=gui_manifest is not None and verify_bench_session(gui_manifest)['evidence_count']==1
         window.select_page(4);app.processEvents()
         window.hardware_panel.tabs.setCurrentIndex(3);app.processEvents()
-        checks['finite_link_controls']=window.hardware_panel.tabs.count()==5 and not window.hardware_panel.conducted_panel.is_busy()
+        checks['finite_link_controls']=window.hardware_panel.tabs.count()==6 and not window.hardware_panel.conducted_panel.is_busy()
         if output:
             screenshot=Path(output).with_suffix('.png');screenshot.parent.mkdir(parents=True,exist_ok=True)
             checks['gui_screenshot_saved']=window.grab().save(str(screenshot))
