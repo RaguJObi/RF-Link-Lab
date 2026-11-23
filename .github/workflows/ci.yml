@@ -1,0 +1,27 @@
+name: Software validation
+on: [push, pull_request]
+jobs:
+  python-and-protocol:
+    runs-on: ubuntu-latest
+    env:
+      QT_QPA_PLATFORM: offscreen
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: sudo apt-get update && sudo apt-get install -y libegl1 libgl1 libxkbcommon0 fonts-dejavu-core
+      - run: python -m pip install -e '.[dev]'
+      - run: python -m pytest -q
+      - run: python -m rf_link_lab self-test --with-ui --output artifacts/ci-self-test.json
+      - name: Compile and verify portable C encoder
+        working-directory: firmware
+        run: |
+          cc -std=c99 -Wall -Wextra -Werror rf_telemetry.c test_codec.c -o test_codec
+          ./test_codec
+          cc -std=c99 -Wall -Wextra -Werror rf_button.c test_button.c -o test_button
+          ./test_button
+      - name: Build and inspect Cortex-M4 firmware
+        run: |
+          python -m pip install ziglang==0.15.2
+          python scripts/build_firmware.py

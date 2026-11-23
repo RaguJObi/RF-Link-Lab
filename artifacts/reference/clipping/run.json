@@ -1,0 +1,145 @@
+{
+  "schema": "rf-link-lab-run-v1",
+  "provenance": "synthetic",
+  "created_utc": "2026-10-18T10:41:08.430621+00:00",
+  "application_version": "0.1.0",
+  "python_version": "3.12.14",
+  "config": {
+    "seed": 42,
+    "frames": 12,
+    "snr_db": 24,
+    "cfo_hz": 0,
+    "gain": 4.2,
+    "clip_level": 1.0,
+    "sample_rate": 200000,
+    "samples_per_symbol": 4,
+    "phase_deg": 15,
+    "delay_samples": 37,
+    "correct_cfo": true
+  },
+  "metrics": {
+    "ber": 0.044730392156862746,
+    "bit_errors": 73,
+    "bits_total": 1632,
+    "bits_compared": 1632,
+    "bits_erased": 0,
+    "frames_lost": 3,
+    "evm_pct": 52.337622354743715,
+    "packet_success_rate": 0.75,
+    "packets_ok": 9,
+    "packets_total": 12,
+    "cfo_est_hz": 7.431367569556434,
+    "clipping_fraction": 0.9426229508196722,
+    "snr_est_db": 35.26193141866694,
+    "sync_score": 0.993195632667007,
+    "synchronization_valid": true,
+    "cfo_correction_enabled": true
+  },
+  "features": {
+    "cfo_abs_hz": 7.431367569556434,
+    "evm_pct": 52.337622354743715,
+    "clipping_fraction": 0.9426229508196722,
+    "snr_est_db": 35.26193141866694,
+    "amplitude_cv": 0.16547580000289056,
+    "spectral_flatness": 0.556180168726275
+  },
+  "telemetry": [
+    {
+      "sequence": 0,
+      "uptime_ms": 0,
+      "button": true,
+      "crc_ok": true
+    },
+    {
+      "sequence": 1,
+      "uptime_ms": 100,
+      "button": false,
+      "crc_ok": true
+    },
+    {
+      "sequence": 2,
+      "uptime_ms": 200,
+      "button": false,
+      "crc_ok": true
+    },
+    {
+      "sequence": 3,
+      "uptime_ms": 300,
+      "button": false,
+      "crc_ok": true
+    },
+    {
+      "sequence": 4,
+      "uptime_ms": 400,
+      "button": false,
+      "crc_ok": true
+    },
+    {
+      "sequence": 5,
+      "uptime_ms": 500,
+      "button": true,
+      "crc_ok": true
+    },
+    {
+      "sequence": 6,
+      "uptime_ms": 600,
+      "button": false,
+      "crc_ok": true
+    },
+    {
+      "sequence": 7,
+      "uptime_ms": 700,
+      "button": false,
+      "crc_ok": true
+    },
+    {
+      "sequence": 8,
+      "uptime_ms": 800,
+      "button": false,
+      "crc_ok": true
+    }
+  ],
+  "diagnosis": {
+    "label": "clipping",
+    "suggested_label": "clipping",
+    "support": 0.9520833333333334,
+    "support_meaning": "Mean learned-tree class support; not calibrated confidence.",
+    "probabilities": {
+      "healthy": 0.0,
+      "frequency_offset": 0.0125,
+      "low_snr": 0.035416666666666666,
+      "clipping": 0.9520833333333334
+    },
+    "ranked_signatures": [
+      {
+        "label": "clipping",
+        "support": 0.9520833333333334
+      },
+      {
+        "label": "low_snr",
+        "support": 0.035416666666666666
+      },
+      {
+        "label": "frequency_offset",
+        "support": 0.0125
+      },
+      {
+        "label": "healthy",
+        "support": 0.0
+      }
+    ],
+    "evidence": [
+      "Measured absolute frequency offset: 7.4 Hz.",
+      "Pilot residual SNR estimate: 35.3 dB.",
+      "Samples at an ADC rail: 94.26%.",
+      "Received-symbol EVM: 52.3%."
+    ],
+    "next_measurement": "Reduce receiver input level or gain only, then repeat the capture; compare rail-hit fraction, EVM and packet CRC.",
+    "unknown_reason": null,
+    "evidence_source": "synthetic_receiver_measurements_only",
+    "limitation": "This model has not been validated on bladeRF captures or physical hardware."
+  },
+  "capture_sha256": "0750989925b6ce6039be61bf3d89146aeb59d62e71e4d427eab914cc5ea14a9b",
+  "replay_scope": "Verify and display stored waveform and recorded metrics; receiver metrics are not recomputed on load.",
+  "limits": "Sampled baseband simulation; not measured RF, calibrated sensitivity, independent radios or standards conformance."
+}

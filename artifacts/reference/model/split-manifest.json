@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "source": "synthetic_simulator_only",
+  "seed": 2026,
+  "session_count": 20,
+  "windows_per_class_per_session": 3,
+  "record_count": 239,
+  "feature_names": [
+    "cfo_abs_hz",
+    "evm_pct",
+    "clipping_fraction",
+    "snr_est_db",
+    "amplitude_cv",
+    "spectral_flatness"
+  ],
+  "attempted_record_count": 240,
+  "excluded_measurement_count": 1,
+  "excluded_measurements": [
+    {
+      "sample_id": "synthetic-session-019-window-01-low_snr",
+      "session_id": "synthetic-session-019",
+      "split": "test",
+      "label": "low_snr",
+      "reason": "receiver did not provide a complete finite measurement vector",
+      "receiver_status": "acquisition_failed",
+      "audit_config": {
+        "seed": 192128,
+        "frames": 6,
+        "snr_db": 1.535330412202946,
+        "cfo_hz": 1.8818490311652036,
+        "clip_level": 4.0,
+        "sample_rate": 200000,
+        "samples_per_symbol": 4,
+        "correct_cfo": false,
+        "gain": 0.4581051488989428,
+        "phase_deg": -37.70611420148168,
+        "delay_samples": 39
+      }
+    }
+  ],
+  "measurement_coverage": 0.9958333333333333,
+  "class_names": [
+    "healthy",
+    "frequency_offset",
+    "low_snr",
+    "clipping"
+  ],
+  "split_sessions": {
+    "train": [
+      "synthetic-session-000",
+      "synthetic-session-001",
+      "synthetic-session-002",
+      "synthetic-session-006",
+      "synthetic-session-008",
+      "synthetic-session-009",
+      "synthetic-session-011",
+      "synthetic-session-012",
+      "synthetic-session-013",
+      "synthetic-session-014",
+      "synthetic-session-015",
+      "synthetic-session-018"
+    ],
+    "validation": [
+      "synthetic-session-003",
+      "synthetic-session-005",
+      "synthetic-session-016",
+      "synthetic-session-017"
+    ],
+    "test": [
+      "synthetic-session-004",
+      "synthetic-session-007",
+      "synthetic-session-010",
+      "synthetic-session-019"
+    ]
+  },
+  "split_counts": {
+    "train": 144,
+    "validation": 48,
+    "test": 47
+  },
+  "split_excluded_counts": {
+    "train": 0,
+    "validation": 0,
+    "test": 1
+  },
+  "split_policy": "Entire virtual recording sessions; train60/validation20/test20 percent (minimum two validation/test sessions).",
+  "nuisance_policy": "Gain .45-.85, phase -180..180deg and delay13..80samples are drawn once per session and shared by every class; SNR24..34dB and nominal CFO+-2Hz shared per window. Nominal ADC rail4 provides headroom even for the low-SNR experiment.",
+  "impairments": {
+    "healthy": "nominal",
+    "frequency_offset": "abs(CFO)800..3800Hz",
+    "low_snr": "SNR0..9dB",
+    "clipping": "ADC rail .12.. .30"
+  },
+  "feature_boundary": "Only FEATURE_NAMES, measured from received samples, enter the model. Labels/settings/session IDs/seeds/metrics are excluded.",
+  "limitation": "Classifier scores condition on acquired captures with complete measured features. Failed acquisitions are recorded separately, never filled with fabricated features. Synthetic sessions share one simulator; performance is not hardware accuracy."
+}

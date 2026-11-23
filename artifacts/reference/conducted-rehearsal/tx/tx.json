@@ -1,0 +1,133 @@
+{
+  "schema": "rf-link-lab-tx-waveform-v1",
+  "version": "0.3.0",
+  "provenance": "prepared_tx_waveform_no_rf",
+  "waveform_format": "rf-link-lab-qpsk-telemetry-v1",
+  "format": "SC16Q11_LE",
+  "normalization_divisor": 2048,
+  "sample_rate": 1000000,
+  "symbol_rate": 50000,
+  "samples_per_symbol": 20,
+  "samples": 39705,
+  "active_samples": 19705,
+  "guard_samples": 10000,
+  "prefix_guard_samples": 10000,
+  "suffix_guard_samples": 10000,
+  "duration_s": 0.039705,
+  "frames_expected": 12,
+  "payload": [
+    {
+      "sequence": 0,
+      "uptime_ms": 1000,
+      "button": false,
+      "frame_hex": "b562010900000000e803000000c418ab46",
+      "frame_sha256": "6796619db26baaf57b5afcad37b25775b6292f6f1f9f6d871afad9b7bba35495"
+    },
+    {
+      "sequence": 1,
+      "uptime_ms": 1100,
+      "button": true,
+      "frame_hex": "b5620109010000004c04000001fe3da73e",
+      "frame_sha256": "99a9e87a7c4deac892a63366e4eb3f4a38e928eb8da81a41d6cbac6809aa850b"
+    },
+    {
+      "sequence": 2,
+      "uptime_ms": 1200,
+      "button": false,
+      "frame_hex": "b562010902000000b004000000f18ce9fd",
+      "frame_sha256": "392d07f841082560e57160109b6379dd38884fb9ba37cba8501deb3d6d6a28fb"
+    },
+    {
+      "sequence": 3,
+      "uptime_ms": 1300,
+      "button": true,
+      "frame_hex": "b562010903000000140500000117f68ea0",
+      "frame_sha256": "158b61bed1a44a469366192823fab84131b879016d46a676528882d931480d89"
+    },
+    {
+      "sequence": 4,
+      "uptime_ms": 1400,
+      "button": false,
+      "frame_hex": "b562010904000000780500000004312aef",
+      "frame_sha256": "e26a9680bce56bcb0e33425be13b80c7b776ac8cca460400b50cb9592ba4da9d"
+    },
+    {
+      "sequence": 5,
+      "uptime_ms": 1500,
+      "button": true,
+      "frame_hex": "b562010905000000dc05000001872cf10a",
+      "frame_sha256": "a23ce0e3aa1b9b98e005026e904bef3e58b175238bae34f0a79526b8c8affb3c"
+    },
+    {
+      "sequence": 6,
+      "uptime_ms": 1600,
+      "button": false,
+      "frame_hex": "b56201090600000040060000002b453842",
+      "frame_sha256": "8901ae3164e73ec9d6413ca20715b2829fa1ec88f726b5b571082e10fabcc273"
+    },
+    {
+      "sequence": 7,
+      "uptime_ms": 1700,
+      "button": true,
+      "frame_hex": "b562010907000000a406000001e10010ff",
+      "frame_sha256": "3f7a3f2ff760c57c06570f4e474afa8ea44e6741ea8e76c5fb44562cba0d997a"
+    },
+    {
+      "sequence": 8,
+      "uptime_ms": 1800,
+      "button": false,
+      "frame_hex": "b562010908000000080700000054eac55a",
+      "frame_sha256": "be3471299ae83c5c9e103198341bf9058caa5574fa8e81066eb4169aa7d9e149"
+    },
+    {
+      "sequence": 9,
+      "uptime_ms": 1900,
+      "button": true,
+      "frame_hex": "b5620109090000006c070000010c1f0b56",
+      "frame_sha256": "3f7d92e8ea139f49732589dbf03e5648821a685f5a906d822d2843def4c50f46"
+    },
+    {
+      "sequence": 10,
+      "uptime_ms": 2000,
+      "button": false,
+      "frame_hex": "b56201090a000000d0070000004af6b6cd",
+      "frame_sha256": "a6261bf9596d3c78e9baa14437d9c04e7ac091933ff7256f4abd61ba612ef394"
+    },
+    {
+      "sequence": 11,
+      "uptime_ms": 2100,
+      "button": true,
+      "frame_hex": "b56201090b0000003408000001d6a3fd28",
+      "frame_sha256": "aaa63aeaffe86997361315ddda51bc2b2026bbfb2da94da3775e9e7bace84a5e"
+    }
+  ],
+  "finite": true,
+  "repeat_count": 1,
+  "resampling": {
+    "method": "scipy.signal.resample_poly",
+    "source_sample_rate": 200000,
+    "up": 5,
+    "down": 1
+  },
+  "quantization": {
+    "rounding": "numpy.rint; nearest integer, ties to even",
+    "clipping": "rejected",
+    "tx_scale": 0.25,
+    "unscaled_component_peak": 1.1176838848909727,
+    "normalization_multiplier": 0.22367684045510497,
+    "quantized_component_peak": 0.25,
+    "positive_rail_headroom_codes": 1543,
+    "negative_rail_headroom_codes": 1536
+  },
+  "reference_note": "TX I/Q is the exact quantized stream. Payload symbols are its independently acquired normalized decisions; bits are the encoded expected payload.",
+  "files": {
+    "waveform": {
+      "file": "tx.sc16q11",
+      "sha256": "2d0833a333b3ea7314e109e4d86a1a26591856534b6bedb076b7ca24fdc3310d"
+    },
+    "reference": {
+      "file": "tx-reference.npz",
+      "sha256": "da5220ac95a2bb40a1480a4820ded406cc27a15973a2b4ee79b160fc26a4fcfd"
+    }
+  }
+}

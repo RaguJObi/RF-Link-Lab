@@ -1,0 +1,163 @@
+{
+  "schema": "rf-link-lab-run-v1",
+  "provenance": "synthetic",
+  "created_utc": "2026-10-18T10:41:05.579544+00:00",
+  "application_version": "0.1.0",
+  "python_version": "3.12.14",
+  "config": {
+    "seed": 42,
+    "frames": 12,
+    "snr_db": 24,
+    "cfo_hz": 0,
+    "gain": 0.65,
+    "clip_level": 1.0,
+    "sample_rate": 200000,
+    "samples_per_symbol": 4,
+    "phase_deg": 15,
+    "delay_samples": 37,
+    "correct_cfo": true
+  },
+  "metrics": {
+    "ber": 0.0,
+    "bit_errors": 0,
+    "bits_total": 1632,
+    "bits_compared": 1632,
+    "bits_erased": 0,
+    "frames_lost": 0,
+    "evm_pct": 5.599042962903038,
+    "packet_success_rate": 1.0,
+    "packets_ok": 12,
+    "packets_total": 12,
+    "cfo_est_hz": -0.37408912691925894,
+    "clipping_fraction": 0.0,
+    "snr_est_db": 20.107418931234577,
+    "sync_score": 0.9988002600264528,
+    "synchronization_valid": true,
+    "cfo_correction_enabled": true
+  },
+  "features": {
+    "cfo_abs_hz": 0.37408912691925894,
+    "evm_pct": 5.599042962903038,
+    "clipping_fraction": 0.0,
+    "snr_est_db": 20.107418931234577,
+    "amplitude_cv": 0.25440344739243637,
+    "spectral_flatness": 0.507513949298132
+  },
+  "telemetry": [
+    {
+      "sequence": 0,
+      "uptime_ms": 0,
+      "button": true,
+      "crc_ok": true
+    },
+    {
+      "sequence": 1,
+      "uptime_ms": 100,
+      "button": false,
+      "crc_ok": true
+    },
+    {
+      "sequence": 2,
+      "uptime_ms": 200,
+      "button": false,
+      "crc_ok": true
+    },
+    {
+      "sequence": 3,
+      "uptime_ms": 300,
+      "button": false,
+      "crc_ok": true
+    },
+    {
+      "sequence": 4,
+      "uptime_ms": 400,
+      "button": false,
+      "crc_ok": true
+    },
+    {
+      "sequence": 5,
+      "uptime_ms": 500,
+      "button": true,
+      "crc_ok": true
+    },
+    {
+      "sequence": 6,
+      "uptime_ms": 600,
+      "button": false,
+      "crc_ok": true
+    },
+    {
+      "sequence": 7,
+      "uptime_ms": 700,
+      "button": false,
+      "crc_ok": true
+    },
+    {
+      "sequence": 8,
+      "uptime_ms": 800,
+      "button": false,
+      "crc_ok": true
+    },
+    {
+      "sequence": 9,
+      "uptime_ms": 900,
+      "button": false,
+      "crc_ok": true
+    },
+    {
+      "sequence": 10,
+      "uptime_ms": 1000,
+      "button": true,
+      "crc_ok": true
+    },
+    {
+      "sequence": 11,
+      "uptime_ms": 1100,
+      "button": false,
+      "crc_ok": true
+    }
+  ],
+  "diagnosis": {
+    "label": "healthy",
+    "suggested_label": "healthy",
+    "support": 0.781547619047619,
+    "support_meaning": "Mean learned-tree class support; not calibrated confidence.",
+    "probabilities": {
+      "healthy": 0.781547619047619,
+      "frequency_offset": 0.0017857142857142857,
+      "low_snr": 0.03229166666666666,
+      "clipping": 0.184375
+    },
+    "ranked_signatures": [
+      {
+        "label": "healthy",
+        "support": 0.781547619047619
+      },
+      {
+        "label": "clipping",
+        "support": 0.184375
+      },
+      {
+        "label": "low_snr",
+        "support": 0.03229166666666666
+      },
+      {
+        "label": "frequency_offset",
+        "support": 0.0017857142857142857
+      }
+    ],
+    "evidence": [
+      "Measured absolute frequency offset: 0.4 Hz.",
+      "Pilot residual SNR estimate: 20.1 dB.",
+      "Samples at an ADC rail: 0.00%.",
+      "Received-symbol EVM: 5.6%."
+    ],
+    "next_measurement": "Repeat the capture with the same settings and a fresh recording; verify packet CRC and measured values remain stable.",
+    "unknown_reason": null,
+    "evidence_source": "synthetic_receiver_measurements_only",
+    "limitation": "This model has not been validated on bladeRF captures or physical hardware."
+  },
+  "capture_sha256": "4e31be43926060410c014098a6cad60c348a7ed183155f7c2dea03bb3be1b016",
+  "replay_scope": "Verify and display stored waveform and recorded metrics; receiver metrics are not recomputed on load.",
+  "limits": "Sampled baseband simulation; not measured RF, calibrated sensitivity, independent radios or standards conformance."
+}

@@ -1,0 +1,8 @@
+# Tested Windows/Python 3.12 environment, 18 October 2026.
+# On another OS/Python version install from pyproject.toml so pip chooses compatible wheels.
+numpy==2.5.4
+scipy==1.18.1
+scikit-learn==1.9.1
+PySide6==6.12.0
+pyserial==3.5
+pytest==9.1.1

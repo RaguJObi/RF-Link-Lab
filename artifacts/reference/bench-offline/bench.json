@@ -1,0 +1,248 @@
+{
+  "schema": "rf-link-lab-bench-v1",
+  "session_id": "11d03359-fe55-43ae-86e9-84bad9d24d7b",
+  "title": "Offline bench-session example",
+  "application_version": "0.2.1",
+  "created_utc": "2026-10-18T23:23:27.775418+00:00",
+  "finalized_utc": "2026-10-18T23:23:28.041479+00:00",
+  "status": "finalized",
+  "finalized": true,
+  "environment": {
+    "os": "Windows-11-10.0.26300-SP0",
+    "architecture": "AMD64",
+    "python": "3.12.14",
+    "operator_environment": {}
+  },
+  "local_resource_identity": {
+    "firmware": {
+      "available": true,
+      "scope": "local resource identity; use on a board/run is not established",
+      "size_bytes": 1352,
+      "sha256": "636d701ff7140d075b9d69d265504bf9cf352a393bb4b4b8d8e8a8bb92e0cdf2",
+      "filename": "rf_link_lab_f446re.bin"
+    },
+    "model": {
+      "available": true,
+      "scope": "local resource identity; use on a board/run is not established",
+      "size_bytes": 116325,
+      "sha256": "1aa00e850215c368cee75c1e33361670e4f430fcdff145cb703dcd9448d0fa71",
+      "filename": "model.json"
+    }
+  },
+  "notes": [
+    {
+      "text": "Software-only demonstration. No serial device, USB probe or RF acquisition was used.",
+      "origin": "operator_entered",
+      "timestamp_utc": "2026-10-18T23:23:27.831189+00:00"
+    }
+  ],
+  "checks": [
+    {
+      "name": "ubuntu_execution",
+      "status": "not_attempted",
+      "details": null,
+      "origin": "default_not_attempted",
+      "timestamp_utc": null
+    },
+    {
+      "name": "nucleo_identity",
+      "status": "not_attempted",
+      "details": null,
+      "origin": "default_not_attempted",
+      "timestamp_utc": null
+    },
+    {
+      "name": "firmware_flash",
+      "status": "not_attempted",
+      "details": null,
+      "origin": "default_not_attempted",
+      "timestamp_utc": null
+    },
+    {
+      "name": "uart_button_response",
+      "status": "not_attempted",
+      "details": null,
+      "origin": "default_not_attempted",
+      "timestamp_utc": null
+    },
+    {
+      "name": "bladerf_identification",
+      "status": "not_attempted",
+      "details": null,
+      "origin": "default_not_attempted",
+      "timestamp_utc": null
+    },
+    {
+      "name": "bladerf_rx_capture",
+      "status": "not_attempted",
+      "details": null,
+      "origin": "default_not_attempted",
+      "timestamp_utc": null
+    },
+    {
+      "name": "conducted_rf_link",
+      "status": "not_attempted",
+      "details": null,
+      "origin": "default_not_attempted",
+      "timestamp_utc": null
+    },
+    {
+      "name": "offline_parser_and_bundle_example",
+      "status": "passed",
+      "details": "Software example created; hardware checks remain NOT_ATTEMPTED.",
+      "origin": "operator_entered",
+      "timestamp_utc": "2026-10-18T23:23:28.012435+00:00"
+    }
+  ],
+  "probes": [],
+  "evidence": [
+    {
+      "kind": "uart",
+      "manifest": "uart/uart.json",
+      "files": [
+        "uart/uart.json",
+        "uart/chunks.jsonl",
+        "uart/packets.jsonl",
+        "uart/raw.bin"
+      ],
+      "status": "complete",
+      "complete": true,
+      "summary": {
+        "bytes_received": 134,
+        "crc_errors": 1,
+        "discarded_bytes": 32,
+        "duplicates": 1,
+        "framing_errors": 0,
+        "out_of_order": 1,
+        "packets_ok": 6,
+        "segment_count": 1,
+        "segments_by_source": {
+          "offline_feed": 1
+        },
+        "sequence_gaps": 1,
+        "sources": [
+          "offline_feed"
+        ]
+      },
+      "error": null,
+      "stream_errors": [],
+      "started_utc": "2026-10-18T23:23:27.836720+00:00",
+      "ended_utc": "2026-10-18T23:23:27.847264+00:00",
+      "parser_config": {
+        "read_size": 4096,
+        "sequence_window": 1024
+      },
+      "scope": "Recorded UART source labels are declarations; parser success does not verify board identity or physical button operation.",
+      "integrity": "hash_verified_at_attachment",
+      "source_authenticated": false,
+      "stream_error_count": 0,
+      "stream_errors_truncated": false,
+      "connection_attempt_count": 0,
+      "connection_attempts": [],
+      "connection_attempts_truncated": false
+    },
+    {
+      "kind": "iq",
+      "manifest": "synthetic-iq/run.json",
+      "files": [
+        "synthetic-iq/run.json",
+        "synthetic-iq/capture.npz"
+      ],
+      "summary": {
+        "format": "saved_run",
+        "declared_origin": "synthetic",
+        "processing": "synthetic",
+        "metadata": {
+          "waveform_format": "rf-link-lab-qpsk-telemetry-v1",
+          "sample_rate": 200000,
+          "samples_per_symbol": 4,
+          "symbol_rate": 50000.0,
+          "expected_frames": 3,
+          "source": "generated telemetry waveform",
+          "correct_cfo": true,
+          "provenance": "synthetic"
+        },
+        "config": {
+          "seed": 42,
+          "frames": 3,
+          "snr_db": 24,
+          "cfo_hz": 0,
+          "gain": 0.65,
+          "clip_level": 1.0,
+          "sample_rate": 200000,
+          "samples_per_symbol": 4,
+          "phase_deg": 15,
+          "delay_samples": 37,
+          "correct_cfo": true
+        },
+        "recorded_metrics": {
+          "status": "decoded",
+          "acquisition_valid": true,
+          "synchronization_valid": true,
+          "reference_available": true,
+          "benchmark_alignment_valid": true,
+          "ber": 0.0,
+          "bit_errors": 0,
+          "bits_total": 408,
+          "bits_compared": 408,
+          "bits_erased": 0,
+          "frames_lost": 0,
+          "frames_expected": 3,
+          "evm_pct": 5.30888524103467,
+          "reference_evm_pct": 5.30888524103467,
+          "pilot_evm_pct": 4.764107993634192,
+          "packet_success_rate": 1.0,
+          "packets_ok": 3,
+          "packets_total": 3,
+          "crc_rejected_candidates": 0,
+          "decoded_bytes": 54,
+          "cfo_est_hz": -0.03120568569635467,
+          "clipping_fraction": 0.0,
+          "snr_est_db": 20.101542888424188,
+          "sync_score": 0.9988670918847014,
+          "cfo_correction_enabled": true,
+          "sample_count": 1578
+        },
+        "capture_sha256": "31037b0fdd9ab2da4bc7d5d7b768d0e130dc7cbadd77bb3e21c04de67290aafa"
+      },
+      "integrity": "hash_verified_at_attachment",
+      "source_authenticated": false,
+      "scope": "Stored metadata and measurements only; attaching does not rerun the receiver or establish physical RF acquisition."
+    }
+  ],
+  "assets": {
+    "uart/uart.json": {
+      "size_bytes": 1560,
+      "sha256": "5ed5669261f132e7346374ae125314bdd16a045f32f7ea6ade81f3a3a5652dd1"
+    },
+    "uart/chunks.jsonl": {
+      "size_bytes": 3781,
+      "sha256": "0f46ebea4b40f79b28ebc4649855a6c7b526cef122dffff7f889488d06685e8c"
+    },
+    "uart/packets.jsonl": {
+      "size_bytes": 1068,
+      "sha256": "b898bc1f1b763253623b3d349c80f0aa33e444cb85ce2d2854d694d2226f130c"
+    },
+    "uart/raw.bin": {
+      "size_bytes": 134,
+      "sha256": "c1c868fa0a156b7bf472c4c4fe971c77a3131bc025371b9c65b7a12faeba4400"
+    },
+    "synthetic-iq/run.json": {
+      "size_bytes": 2555,
+      "sha256": "ed2df7005d6cc2285fa7aab5039794ae7dcdaef7bb02095aae38655e4a91d209"
+    },
+    "synthetic-iq/capture.npz": {
+      "size_bytes": 46889,
+      "sha256": "31037b0fdd9ab2da4bc7d5d7b768d0e130dc7cbadd77bb3e21c04de67290aafa"
+    },
+    "events.jsonl": {
+      "size_bytes": 3687,
+      "sha256": "0aab32dfe8743650d7021e8e3de8490b3dfb12e90ad8b71b48a60a77ee93dac8"
+    },
+    "report.html": {
+      "size_bytes": 9968,
+      "sha256": "1de6c2a11497b1940df8e1dc33e9558534813f0e1ba5b922176acd4a26a8729b"
+    }
+  },
+  "limits": "Source declarations are not authenticated. Operator checks are assertions, not automatic measurements. Offline UART and synthetic I/Q do not prove physical button operation, device identity, RF transmission, or RF performance. Attachment verifies and preserves existing files; no receiver or hardware runs."
+}

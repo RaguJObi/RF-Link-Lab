@@ -1,0 +1,313 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Finite conducted link — rehearsal — RF Link Lab</title>
+<style>body{margin:0;background:#0b1320;color:#e5edf6;font:16px/1.6 system-ui}main{max-width:1100px;margin:auto;padding:36px}h1{font-size:32px}h2{margin-top:36px}a{color:#45d5bd}pre,article{background:#101d2d;padding:18px;overflow-wrap:anywhere}pre{white-space:pre-wrap;font-size:13px}table{width:100%;border-collapse:collapse}td,th{text-align:left;border-bottom:1px solid #33465b;padding:10px}.tablewrap{overflow-x:auto}.warning{color:#ffca7a}time,.metrics span{color:#9aabc0}article{margin-bottom:16px}.metrics{display:flex;flex-wrap:wrap;gap:28px;margin:20px 0}.metrics div{min-width:130px}.metrics span,.metrics strong{display:block}.metrics strong{font-size:25px}details{margin:16px 0}summary{color:#45d5bd;cursor:pointer}@media(max-width:600px){main{padding:18px}h1{font-size:26px}}</style>
+<main><p>RF LINK LAB · BENCH SESSION · 0.3.0</p><h1>Finite conducted link — rehearsal</h1>
+<p>Created UTC: 2026-10-19T08:34:17.097845+00:00<br>Finalized UTC: 2026-10-19T08:34:18.161593+00:00</p>
+<h2>Evidence boundary</h2><p>Source declarations are not authenticated. Operator checks are assertions, not automatic measurements. Offline UART and synthetic I/Q do not prove physical button operation, device identity, RF transmission, or RF performance. Attachment verifies and preserves existing files; no receiver or hardware runs.</p><p>A finalized session means its report and evidence inventory are sealed for change detection. It does not mean hardware checks passed. The JSON manifest itself is not signed.</p>
+<h2>Preserved recordings</h2><article><h3>IQ recording</h3><p>Declared I/Q origin: <strong>synthetic_duplex_rehearsal</strong></p><p>Stored metadata and measurements only; attaching does not rerun the receiver or establish physical RF acquisition.</p><details><summary>Full recorded metadata and connection history</summary><pre>{
+  &quot;format&quot;: &quot;raw_sc16q11&quot;,
+  &quot;declared_origin&quot;: &quot;synthetic_duplex_rehearsal&quot;,
+  &quot;metadata&quot;: {
+    &quot;schema&quot;: &quot;rf-link-lab.duplex-rehearsal-rx.v1&quot;,
+    &quot;source&quot;: &quot;synthetic_duplex_rehearsal&quot;,
+    &quot;file&quot;: &quot;rx.sc16q11&quot;,
+    &quot;format&quot;: &quot;SC16Q11_LE&quot;,
+    &quot;sample_rate&quot;: 1000000,
+    &quot;symbol_rate&quot;: 50000,
+    &quot;samples&quot;: 69705,
+    &quot;bytes&quot;: 278820,
+    &quot;sha256&quot;: &quot;7088b9046a2a099196827225ddcb5c835e3e7c5985eff46b42ffe5b7662b8d51&quot;,
+    &quot;requested&quot;: {
+      &quot;sample_rate&quot;: 1000000
+    },
+    &quot;rf_transmitted&quot;: false,
+    &quot;hardware_accessed&quot;: false,
+    &quot;channel&quot;: {
+      &quot;snr_db&quot;: 30,
+      &quot;cfo_hz&quot;: 300,
+      &quot;amplitude&quot;: 0.8,
+      &quot;phase_rad&quot;: 0.2,
+      &quot;delay_samples&quot;: 10000,
+      &quot;seed&quot;: 3102026
+    },
+    &quot;scope&quot;: &quot;Software channel applied to saved quantized TX bytes; no radio or serial port opened.&quot;
+  },
+  &quot;capture_sha256&quot;: &quot;7088b9046a2a099196827225ddcb5c835e3e7c5985eff46b42ffe5b7662b8d51&quot;
+}</pre></details><details><summary>Evidence files and SHA256 hashes</summary><ul><li><a href="rehearsal/rx.sc16q11">rehearsal/rx.sc16q11</a><br><small>278820 bytes · SHA256 7088b9046a2a099196827225ddcb5c835e3e7c5985eff46b42ffe5b7662b8d51</small></li><li><a href="rehearsal/rx.sc16q11.json">rehearsal/rx.sc16q11.json</a><br><small>669 bytes · SHA256 45ecd5550ab271b8e6e0647b468f53ec662eb8d9c0d35c39660e4d4a0691fe64</small></li></ul></details></article><article><h3>IQ recording</h3><p>Declared I/Q origin: <strong>synthetic_duplex_rehearsal</strong></p><div class="metrics"><div><span>Recorded valid packets</span><strong>12</strong></div><div><span>Recorded BER</span><strong>0.0</strong></div><div><span>Recorded reference EVM (%)</span><strong>1.0316905206429516</strong></div></div><p>Stored metadata and measurements only; attaching does not rerun the receiver or establish physical RF acquisition.</p><details><summary>Full recorded metadata and connection history</summary><pre>{
+  &quot;format&quot;: &quot;saved_run&quot;,
+  &quot;declared_origin&quot;: &quot;synthetic_duplex_rehearsal&quot;,
+  &quot;processing&quot;: &quot;known_payload_offline_decode&quot;,
+  &quot;metadata&quot;: {
+    &quot;sample_rate&quot;: 200000,
+    &quot;symbol_rate&quot;: 50000.0,
+    &quot;correct_cfo&quot;: true,
+    &quot;source_path&quot;: &quot;C:\\path\\to\\RF-Link-Lab\\artifacts\\reference\\conducted-rehearsal\\rehearsal\\rx.sc16q11&quot;,
+    &quot;source_provenance&quot;: &quot;synthetic_duplex_rehearsal&quot;,
+    &quot;original_origin&quot;: &quot;synthetic_duplex_rehearsal&quot;,
+    &quot;capture_sidecar&quot;: {
+      &quot;schema&quot;: &quot;rf-link-lab.duplex-rehearsal-rx.v1&quot;,
+      &quot;source&quot;: &quot;synthetic_duplex_rehearsal&quot;,
+      &quot;file&quot;: &quot;rx.sc16q11&quot;,
+      &quot;format&quot;: &quot;SC16Q11_LE&quot;,
+      &quot;sample_rate&quot;: 1000000,
+      &quot;symbol_rate&quot;: 50000,
+      &quot;samples&quot;: 69705,
+      &quot;bytes&quot;: 278820,
+      &quot;sha256&quot;: &quot;7088b9046a2a099196827225ddcb5c835e3e7c5985eff46b42ffe5b7662b8d51&quot;,
+      &quot;requested&quot;: {
+        &quot;sample_rate&quot;: 1000000
+      },
+      &quot;rf_transmitted&quot;: false,
+      &quot;hardware_accessed&quot;: false,
+      &quot;channel&quot;: {
+        &quot;snr_db&quot;: 30,
+        &quot;cfo_hz&quot;: 300,
+        &quot;amplitude&quot;: 0.8,
+        &quot;phase_rad&quot;: 0.2,
+        &quot;delay_samples&quot;: 10000,
+        &quot;seed&quot;: 3102026
+      },
+      &quot;scope&quot;: &quot;Software channel applied to saved quantized TX bytes; no radio or serial port opened.&quot;
+    },
+    &quot;sha256_verified&quot;: true,
+    &quot;sampling_rate_source&quot;: &quot;user_or_requested_settings; inspect actual hardware readback&quot;,
+    &quot;capture_sha256&quot;: &quot;7088b9046a2a099196827225ddcb5c835e3e7c5985eff46b42ffe5b7662b8d51&quot;,
+    &quot;capture_sample_rate&quot;: 1000000,
+    &quot;source_sample_rate&quot;: 1000000,
+    &quot;samples_per_symbol&quot;: 4,
+    &quot;resampling&quot;: {
+      &quot;method&quot;: &quot;scipy.signal.resample_poly&quot;,
+      &quot;up&quot;: 1,
+      &quot;down&quot;: 5,
+      &quot;input_samples&quot;: 69705,
+      &quot;output_samples&quot;: 13941
+    },
+    &quot;provenance&quot;: &quot;known_payload_offline_decode&quot;,
+    &quot;reference_requested&quot;: false,
+    &quot;waveform_format&quot;: &quot;rf-link-lab-qpsk-telemetry-v1&quot;,
+    &quot;expected_frames&quot;: 12,
+    &quot;known_payload_comparison&quot;: true,
+    &quot;tx_manifest_path&quot;: &quot;C:\\path\\to\\RF-Link-Lab\\artifacts\\reference\\conducted-rehearsal\\tx\\tx.json&quot;,
+    &quot;tx_sha256&quot;: &quot;2d0833a333b3ea7314e109e4d86a1a26591856534b6bedb076b7ca24fdc3310d&quot;,
+    &quot;reference_note&quot;: &quot;TX I/Q is the exact quantized stream. Payload symbols are its independently acquired normalized decisions; bits are the encoded expected payload.&quot;,
+    &quot;known_payload_missing_frames&quot;: [],
+    &quot;known_payload_unexpected_frames&quot;: [],
+    &quot;experiment_mode&quot;: &quot;rehearsal&quot;,
+    &quot;payload_source&quot;: {
+      &quot;source&quot;: &quot;offline_example_payload&quot;
+    },
+    &quot;diagnosis_allowed&quot;: false,
+    &quot;experiment_manifest&quot;: &quot;experiment.json&quot;,
+    &quot;rf_transmitted&quot;: false,
+    &quot;rf_transmission_requested&quot;: false,
+    &quot;rf_success&quot;: &quot;not_applicable&quot;
+  },
+  &quot;config&quot;: {
+    &quot;sample_rate&quot;: 200000,
+    &quot;symbol_rate&quot;: 50000.0,
+    &quot;correct_cfo&quot;: true,
+    &quot;source_path&quot;: &quot;C:\\path\\to\\RF-Link-Lab\\artifacts\\reference\\conducted-rehearsal\\rehearsal\\rx.sc16q11&quot;,
+    &quot;source_provenance&quot;: &quot;synthetic_duplex_rehearsal&quot;,
+    &quot;original_origin&quot;: &quot;synthetic_duplex_rehearsal&quot;,
+    &quot;capture_sidecar&quot;: {
+      &quot;schema&quot;: &quot;rf-link-lab.duplex-rehearsal-rx.v1&quot;,
+      &quot;source&quot;: &quot;synthetic_duplex_rehearsal&quot;,
+      &quot;file&quot;: &quot;rx.sc16q11&quot;,
+      &quot;format&quot;: &quot;SC16Q11_LE&quot;,
+      &quot;sample_rate&quot;: 1000000,
+      &quot;symbol_rate&quot;: 50000,
+      &quot;samples&quot;: 69705,
+      &quot;bytes&quot;: 278820,
+      &quot;sha256&quot;: &quot;7088b9046a2a099196827225ddcb5c835e3e7c5985eff46b42ffe5b7662b8d51&quot;,
+      &quot;requested&quot;: {
+        &quot;sample_rate&quot;: 1000000
+      },
+      &quot;rf_transmitted&quot;: false,
+      &quot;hardware_accessed&quot;: false,
+      &quot;channel&quot;: {
+        &quot;snr_db&quot;: 30,
+        &quot;cfo_hz&quot;: 300,
+        &quot;amplitude&quot;: 0.8,
+        &quot;phase_rad&quot;: 0.2,
+        &quot;delay_samples&quot;: 10000,
+        &quot;seed&quot;: 3102026
+      },
+      &quot;scope&quot;: &quot;Software channel applied to saved quantized TX bytes; no radio or serial port opened.&quot;
+    },
+    &quot;sha256_verified&quot;: true,
+    &quot;sampling_rate_source&quot;: &quot;user_or_requested_settings; inspect actual hardware readback&quot;,
+    &quot;capture_sha256&quot;: &quot;7088b9046a2a099196827225ddcb5c835e3e7c5985eff46b42ffe5b7662b8d51&quot;,
+    &quot;capture_sample_rate&quot;: 1000000,
+    &quot;source_sample_rate&quot;: 1000000,
+    &quot;samples_per_symbol&quot;: 4,
+    &quot;resampling&quot;: {
+      &quot;method&quot;: &quot;scipy.signal.resample_poly&quot;,
+      &quot;up&quot;: 1,
+      &quot;down&quot;: 5,
+      &quot;input_samples&quot;: 69705,
+      &quot;output_samples&quot;: 13941
+    },
+    &quot;provenance&quot;: &quot;known_payload_offline_decode&quot;,
+    &quot;reference_requested&quot;: false,
+    &quot;waveform_format&quot;: &quot;rf-link-lab-qpsk-telemetry-v1&quot;,
+    &quot;expected_frames&quot;: 12,
+    &quot;known_payload_comparison&quot;: true,
+    &quot;tx_manifest_path&quot;: &quot;C:\\path\\to\\RF-Link-Lab\\artifacts\\reference\\conducted-rehearsal\\tx\\tx.json&quot;,
+    &quot;tx_sha256&quot;: &quot;2d0833a333b3ea7314e109e4d86a1a26591856534b6bedb076b7ca24fdc3310d&quot;,
+    &quot;reference_note&quot;: &quot;TX I/Q is the exact quantized stream. Payload symbols are its independently acquired normalized decisions; bits are the encoded expected payload.&quot;,
+    &quot;known_payload_missing_frames&quot;: [],
+    &quot;known_payload_unexpected_frames&quot;: [],
+    &quot;experiment_mode&quot;: &quot;rehearsal&quot;,
+    &quot;payload_source&quot;: {
+      &quot;source&quot;: &quot;offline_example_payload&quot;
+    },
+    &quot;diagnosis_allowed&quot;: false,
+    &quot;experiment_manifest&quot;: &quot;experiment.json&quot;,
+    &quot;rf_transmitted&quot;: false,
+    &quot;rf_transmission_requested&quot;: false,
+    &quot;rf_success&quot;: &quot;not_applicable&quot;
+  },
+  &quot;recorded_metrics&quot;: {
+    &quot;status&quot;: &quot;decoded&quot;,
+    &quot;acquisition_valid&quot;: true,
+    &quot;synchronization_valid&quot;: true,
+    &quot;reference_available&quot;: true,
+    &quot;benchmark_alignment_valid&quot;: true,
+    &quot;ber&quot;: 0.0,
+    &quot;bit_errors&quot;: 0,
+    &quot;bits_total&quot;: 1632,
+    &quot;bits_compared&quot;: 1632,
+    &quot;bits_erased&quot;: 0,
+    &quot;frames_lost&quot;: 0,
+    &quot;frames_expected&quot;: 12,
+    &quot;evm_pct&quot;: 1.0316905206429516,
+    &quot;reference_evm_pct&quot;: 1.0316905206429516,
+    &quot;pilot_evm_pct&quot;: 1.0872138649134855,
+    &quot;packet_success_rate&quot;: 1.0,
+    &quot;packets_ok&quot;: 12,
+    &quot;packets_total&quot;: 12,
+    &quot;crc_rejected_candidates&quot;: 0,
+    &quot;decoded_bytes&quot;: 579,
+    &quot;cfo_est_hz&quot;: 299.91595919977885,
+    &quot;clipping_fraction&quot;: 0.0,
+    &quot;snr_est_db&quot;: 34.58769612965958,
+    &quot;sync_score&quot;: 0.999940903539597,
+    &quot;cfo_correction_enabled&quot;: true,
+    &quot;sample_count&quot;: 13941,
+    &quot;known_payload_frames_matched&quot;: 12,
+    &quot;known_payload_frames_missing&quot;: 0,
+    &quot;known_payload_frames_unexpected&quot;: 0,
+    &quot;known_payload_duplicate_frames&quot;: 0,
+    &quot;known_payload_complete&quot;: true,
+    &quot;compared_bit_error_rate&quot;: 0.0,
+    &quot;ber_scope&quot;: &quot;complete_aligned_known_payload&quot;
+  },
+  &quot;capture_sha256&quot;: &quot;356ee20fb8011c2a6c73a4cc77099cabfb46de757428fee181fe3a24c7277e0c&quot;
+}</pre></details><details><summary>Evidence files and SHA256 hashes</summary><ul><li><a href="receiver/run.json">receiver/run.json</a><br><small>8548 bytes · SHA256 f2ed2fef45d59a42469682a8244131d03f9bb8adeab9c0858aa3ca67a442dc76</small></li><li><a href="receiver/capture.npz">receiver/capture.npz</a><br><small>301239 bytes · SHA256 356ee20fb8011c2a6c73a4cc77099cabfb46de757428fee181fe3a24c7277e0c</small></li></ul></details></article><article><h3>EXPERIMENT recording</h3><p>Mode: <strong>rehearsal</strong> · Outcome: decoded</p><p>Declared origin: synthetic_duplex_rehearsal · TX requested: False · Transport cleanup confirmed: True</p><p>Finite-link experiment outcome; offline rehearsal, transport completion and known-payload decoding remain separate.</p><details><summary>Full recorded metadata and connection history</summary><pre>{
+  &quot;declared_origin&quot;: &quot;synthetic_duplex_rehearsal&quot;,
+  &quot;mode&quot;: &quot;rehearsal&quot;,
+  &quot;experiment_status&quot;: &quot;decoded&quot;,
+  &quot;recorded_metrics&quot;: {
+    &quot;status&quot;: &quot;decoded&quot;,
+    &quot;acquisition_valid&quot;: true,
+    &quot;synchronization_valid&quot;: true,
+    &quot;reference_available&quot;: true,
+    &quot;benchmark_alignment_valid&quot;: true,
+    &quot;ber&quot;: 0.0,
+    &quot;bit_errors&quot;: 0,
+    &quot;bits_total&quot;: 1632,
+    &quot;bits_compared&quot;: 1632,
+    &quot;bits_erased&quot;: 0,
+    &quot;frames_lost&quot;: 0,
+    &quot;frames_expected&quot;: 12,
+    &quot;evm_pct&quot;: 1.0316905206429516,
+    &quot;reference_evm_pct&quot;: 1.0316905206429516,
+    &quot;pilot_evm_pct&quot;: 1.0872138649134855,
+    &quot;packet_success_rate&quot;: 1.0,
+    &quot;packets_ok&quot;: 12,
+    &quot;packets_total&quot;: 12,
+    &quot;crc_rejected_candidates&quot;: 0,
+    &quot;decoded_bytes&quot;: 579,
+    &quot;cfo_est_hz&quot;: 299.91595919977885,
+    &quot;clipping_fraction&quot;: 0.0,
+    &quot;snr_est_db&quot;: 34.58769612965958,
+    &quot;sync_score&quot;: 0.999940903539597,
+    &quot;cfo_correction_enabled&quot;: true,
+    &quot;sample_count&quot;: 13941,
+    &quot;known_payload_frames_matched&quot;: 12,
+    &quot;known_payload_frames_missing&quot;: 0,
+    &quot;known_payload_frames_unexpected&quot;: 0,
+    &quot;known_payload_duplicate_frames&quot;: 0,
+    &quot;known_payload_complete&quot;: true,
+    &quot;compared_bit_error_rate&quot;: 0.0,
+    &quot;ber_scope&quot;: &quot;complete_aligned_known_payload&quot;
+  },
+  &quot;payload_source&quot;: {
+    &quot;source&quot;: &quot;offline_example_payload&quot;
+  },
+  &quot;tx_start_requested&quot;: false,
+  &quot;cleanup_confirmed&quot;: true,
+  &quot;transport&quot;: {
+    &quot;status&quot;: &quot;complete&quot;,
+    &quot;capture_completed&quot;: true,
+    &quot;cleanup_confirmed&quot;: true,
+    &quot;tx_start_requested&quot;: false,
+    &quot;hardware_accessed&quot;: false,
+    &quot;paths&quot;: {
+      &quot;rx&quot;: &quot;C:\\path\\to\\RF-Link-Lab\\artifacts\\reference\\conducted-rehearsal\\rehearsal\\rx.sc16q11&quot;,
+      &quot;rx_sidecar&quot;: &quot;C:\\path\\to\\RF-Link-Lab\\artifacts\\reference\\conducted-rehearsal\\rehearsal\\rx.sc16q11.json&quot;
+    },
+    &quot;error&quot;: null
+  },
+  &quot;error&quot;: null,
+  &quot;scope&quot;: &quot;Known-payload measurements and recorded transport outcome; declarations are not authenticated.&quot;
+}</pre></details><details><summary>Evidence files and SHA256 hashes</summary><ul><li><a href="experiment.json">experiment.json</a><br><small>3451 bytes · SHA256 d90b0ef5ba480647411b1c1ed23172ff4dd66fb926f7cac0706ca08afdda1cb5</small></li><li><a href="tx/tx-reference.npz">tx/tx-reference.npz</a><br><small>64728 bytes · SHA256 da5220ac95a2bb40a1480a4820ded406cc27a15973a2b4ee79b160fc26a4fcfd</small></li><li><a href="tx/tx.json">tx/tx.json</a><br><small>4371 bytes · SHA256 84e05d5d09b1ed541055c69c7d24494c74622862c9c1c38341b39fb4fc897e68</small></li><li><a href="tx/tx.sc16q11">tx/tx.sc16q11</a><br><small>158820 bytes · SHA256 2d0833a333b3ea7314e109e4d86a1a26591856534b6bedb076b7ca24fdc3310d</small></li><li><a href="rehearsal/rx.sc16q11">rehearsal/rx.sc16q11</a><br><small>278820 bytes · SHA256 7088b9046a2a099196827225ddcb5c835e3e7c5985eff46b42ffe5b7662b8d51</small></li><li><a href="rehearsal/rx.sc16q11.json">rehearsal/rx.sc16q11.json</a><br><small>669 bytes · SHA256 45ecd5550ab271b8e6e0647b468f53ec662eb8d9c0d35c39660e4d4a0691fe64</small></li><li><a href="receiver/capture.npz">receiver/capture.npz</a><br><small>301239 bytes · SHA256 356ee20fb8011c2a6c73a4cc77099cabfb46de757428fee181fe3a24c7277e0c</small></li><li><a href="receiver/report.html">receiver/report.html</a><br><small>69550 bytes · SHA256 a9f019badd67dc672847a1e9bb266df30373bd0cf97d95faab0a40c7cfff25c9</small></li><li><a href="receiver/run.json">receiver/run.json</a><br><small>8548 bytes · SHA256 f2ed2fef45d59a42469682a8244131d03f9bb8adeab9c0858aa3ca67a442dc76</small></li></ul></details></article>
+<h2>Operator checks</h2><div class="tablewrap"><table><tr><th>Check</th><th>Status</th><th>Origin</th><th>Details</th></tr><tr><td>ubuntu execution</td><td>NOT_ATTEMPTED</td><td>default_not_attempted</td><td>—</td></tr><tr><td>nucleo identity</td><td>NOT_ATTEMPTED</td><td>default_not_attempted</td><td>—</td></tr><tr><td>firmware flash</td><td>NOT_ATTEMPTED</td><td>default_not_attempted</td><td>—</td></tr><tr><td>uart button response</td><td>NOT_ATTEMPTED</td><td>default_not_attempted</td><td>—</td></tr><tr><td>bladerf identification</td><td>NOT_ATTEMPTED</td><td>default_not_attempted</td><td>—</td></tr><tr><td>bladerf rx capture</td><td>NOT_ATTEMPTED</td><td>default_not_attempted</td><td>—</td></tr><tr><td>conducted rf link</td><td>NOT_ATTEMPTED</td><td>default_not_attempted</td><td>—</td></tr></table></div>
+<h2>Operator notes</h2><p>No operator notes.</p><details><summary>Computer environment</summary><pre>{
+  &quot;os&quot;: &quot;Windows-11-10.0.26300-SP0&quot;,
+  &quot;architecture&quot;: &quot;AMD64&quot;,
+  &quot;python&quot;: &quot;3.12.14&quot;,
+  &quot;operator_environment&quot;: {
+    &quot;schema&quot;: &quot;rf-link-lab-doctor-v1&quot;,
+    &quot;application_version&quot;: &quot;0.3.0&quot;,
+    &quot;timestamp_utc&quot;: &quot;2026-10-19T08:34:16.910013+00:00&quot;,
+    &quot;os&quot;: &quot;Windows-11-10.0.26300-SP0&quot;,
+    &quot;architecture&quot;: &quot;AMD64&quot;,
+    &quot;python&quot;: &quot;3.12.14&quot;,
+    &quot;frozen_executable&quot;: false,
+    &quot;resources&quot;: &quot;C:\\path\\to\\RF-Link-Lab&quot;,
+    &quot;session_directory&quot;: &quot;C:\\path\\to\\RF-Link-Lab&quot;,
+    &quot;packages&quot;: {
+      &quot;numpy&quot;: &quot;2.5.4&quot;,
+      &quot;scipy&quot;: &quot;1.18.1&quot;,
+      &quot;PySide6-Essentials&quot;: &quot;6.12.0&quot;,
+      &quot;scikit-learn&quot;: &quot;1.9.1&quot;,
+      &quot;pyserial&quot;: &quot;3.5&quot;
+    },
+    &quot;bladerf_cli&quot;: null,
+    &quot;st_flash&quot;: null,
+    &quot;firmware_binary&quot;: &quot;C:\\path\\to\\RF-Link-Lab\\artifacts\\firmware\\rf_link_lab_f446re.bin&quot;,
+    &quot;firmware_sha256&quot;: &quot;636d701ff7140d075b9d69d265504bf9cf352a393bb4b4b8d8e8a8bb92e0cdf2&quot;,
+    &quot;device_opened&quot;: false,
+    &quot;rf_transmission_enabled&quot;: false,
+    &quot;finite_tx_capability&quot;: &quot;explicit Linux-only conducted workflow; requires operator connection/power plan&quot;,
+    &quot;stdbuf&quot;: null,
+    &quot;hardware_readiness&quot;: &quot;not established by local checks&quot;
+  }
+}</pre></details><details><summary>Local firmware and model identity</summary><pre>{
+  &quot;firmware&quot;: {
+    &quot;available&quot;: true,
+    &quot;scope&quot;: &quot;local resource identity; use on a board/run is not established&quot;,
+    &quot;size_bytes&quot;: 1352,
+    &quot;sha256&quot;: &quot;636d701ff7140d075b9d69d265504bf9cf352a393bb4b4b8d8e8a8bb92e0cdf2&quot;,
+    &quot;filename&quot;: &quot;rf_link_lab_f446re.bin&quot;
+  },
+  &quot;model&quot;: {
+    &quot;available&quot;: true,
+    &quot;scope&quot;: &quot;local resource identity; use on a board/run is not established&quot;,
+    &quot;size_bytes&quot;: 116325,
+    &quot;sha256&quot;: &quot;1aa00e850215c368cee75c1e33361670e4f430fcdff145cb703dcd9448d0fa71&quot;,
+    &quot;filename&quot;: &quot;model.json&quot;
+  }
+}</pre></details>
+<details><summary>Submitted device probe results</summary><pre>[]</pre></details>
+<h2>Integrity and portability</h2><p>The adjacent bench.json lists SHA256 and byte counts for every linked evidence file, this report, and <a href="events.jsonl">events.jsonl</a>. Copy the complete session folder. Verification checks stored bytes and metadata without replaying the receiver or opening devices.</p></main></html>

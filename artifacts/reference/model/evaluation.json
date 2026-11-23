@@ -1,0 +1,372 @@
+{
+  "schema_version": 1,
+  "source": "synthetic_simulator_only",
+  "model_macro_f1": 1.0,
+  "rules_macro_f1": 1.0,
+  "model_accuracy": 1.0,
+  "rules_accuracy": 1.0,
+  "test_count": 47,
+  "model": {
+    "accuracy": 1.0,
+    "macro_f1": 1.0,
+    "confusion_matrix": [
+      [
+        12,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        12,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        11,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        12
+      ]
+    ],
+    "class_order": [
+      "healthy",
+      "frequency_offset",
+      "low_snr",
+      "clipping"
+    ],
+    "per_class": {
+      "healthy": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 12.0
+      },
+      "frequency_offset": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 12.0
+      },
+      "low_snr": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 11.0
+      },
+      "clipping": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 12.0
+      },
+      "accuracy": 1.0,
+      "macro avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 47.0
+      },
+      "weighted avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 47.0
+      }
+    }
+  },
+  "rules": {
+    "accuracy": 1.0,
+    "macro_f1": 1.0,
+    "confusion_matrix": [
+      [
+        12,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        12,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        11,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        12
+      ]
+    ],
+    "class_order": [
+      "healthy",
+      "frequency_offset",
+      "low_snr",
+      "clipping"
+    ],
+    "per_class": {
+      "healthy": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 12.0
+      },
+      "frequency_offset": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 12.0
+      },
+      "low_snr": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 11.0
+      },
+      "clipping": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 12.0
+      },
+      "accuracy": 1.0,
+      "macro avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 47.0
+      },
+      "weighted avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 47.0
+      }
+    }
+  },
+  "excluded_test_count": 1,
+  "receiver_measurement_coverage": 0.9958333333333333,
+  "score_scope": "Classifier scores are conditional on complete receiver measurements. Failed acquisitions are logged separately and are not assigned fabricated features.",
+  "abstention": {
+    "minimum_support": 0.55,
+    "test_coverage": 1.0,
+    "accepted_test_accuracy": 1.0,
+    "unknown_test_count": 0
+  },
+  "mixed_fault_probe": {
+    "count": 12,
+    "rejection_rate": 1.0,
+    "results": [
+      {
+        "seed": 902026,
+        "label": "unknown",
+        "rejection_stage": "diagnostic_guards",
+        "unknown_reason": "Multiple impairment signatures are present; the training labels describe single faults."
+      },
+      {
+        "seed": 902027,
+        "label": "unknown",
+        "rejection_stage": "diagnostic_guards",
+        "unknown_reason": "Multiple impairment signatures are present; the training labels describe single faults."
+      },
+      {
+        "seed": 902028,
+        "label": "unknown",
+        "rejection_stage": "diagnostic_guards",
+        "unknown_reason": "Multiple impairment signatures are present; the training labels describe single faults."
+      },
+      {
+        "seed": 902029,
+        "label": "unknown",
+        "rejection_stage": "diagnostic_guards",
+        "unknown_reason": "Multiple impairment signatures are present; the training labels describe single faults."
+      },
+      {
+        "seed": 902030,
+        "label": "unknown",
+        "rejection_stage": "diagnostic_guards",
+        "unknown_reason": "Multiple impairment signatures are present; the training labels describe single faults."
+      },
+      {
+        "seed": 902031,
+        "label": "unknown",
+        "rejection_stage": "diagnostic_guards",
+        "unknown_reason": "Multiple impairment signatures are present; the training labels describe single faults."
+      },
+      {
+        "seed": 902032,
+        "label": "unknown",
+        "rejection_stage": "diagnostic_guards",
+        "unknown_reason": "Multiple impairment signatures are present; the training labels describe single faults."
+      },
+      {
+        "seed": 902033,
+        "label": "unknown",
+        "rejection_stage": "diagnostic_guards",
+        "unknown_reason": "Multiple impairment signatures are present; the training labels describe single faults."
+      },
+      {
+        "seed": 902034,
+        "label": "unknown",
+        "rejection_stage": "diagnostic_guards",
+        "unknown_reason": "Multiple impairment signatures are present; the training labels describe single faults."
+      },
+      {
+        "seed": 902035,
+        "label": "unknown",
+        "rejection_stage": "diagnostic_guards",
+        "unknown_reason": "Multiple impairment signatures are present; the training labels describe single faults."
+      },
+      {
+        "seed": 902036,
+        "label": "unknown",
+        "rejection_stage": "diagnostic_guards",
+        "unknown_reason": "Multiple impairment signatures are present; the training labels describe single faults."
+      },
+      {
+        "seed": 902037,
+        "label": "unknown",
+        "rejection_stage": "diagnostic_guards",
+        "unknown_reason": "Multiple impairment signatures are present; the training labels describe single faults."
+      }
+    ],
+    "limitation": "Small synthetic demonstration of simultaneous faults, not an OOD benchmark."
+  },
+  "portable_prediction_max_abs_difference": 0.0,
+  "rule_thresholds": {
+    "cfo_abs_hz": 500.0,
+    "snr_est_db": 12.0,
+    "clipping_fraction": 0.035
+  },
+  "rule_priority": [
+    "clipping",
+    "frequency_offset",
+    "low_snr",
+    "healthy"
+  ],
+  "split_manifest": {
+    "schema_version": 1,
+    "source": "synthetic_simulator_only",
+    "seed": 2026,
+    "session_count": 20,
+    "windows_per_class_per_session": 3,
+    "record_count": 239,
+    "feature_names": [
+      "cfo_abs_hz",
+      "evm_pct",
+      "clipping_fraction",
+      "snr_est_db",
+      "amplitude_cv",
+      "spectral_flatness"
+    ],
+    "attempted_record_count": 240,
+    "excluded_measurement_count": 1,
+    "excluded_measurements": [
+      {
+        "sample_id": "synthetic-session-019-window-01-low_snr",
+        "session_id": "synthetic-session-019",
+        "split": "test",
+        "label": "low_snr",
+        "reason": "receiver did not provide a complete finite measurement vector",
+        "receiver_status": "acquisition_failed",
+        "audit_config": {
+          "seed": 192128,
+          "frames": 6,
+          "snr_db": 1.535330412202946,
+          "cfo_hz": 1.8818490311652036,
+          "clip_level": 4.0,
+          "sample_rate": 200000,
+          "samples_per_symbol": 4,
+          "correct_cfo": false,
+          "gain": 0.4581051488989428,
+          "phase_deg": -37.70611420148168,
+          "delay_samples": 39
+        }
+      }
+    ],
+    "measurement_coverage": 0.9958333333333333,
+    "class_names": [
+      "healthy",
+      "frequency_offset",
+      "low_snr",
+      "clipping"
+    ],
+    "split_sessions": {
+      "train": [
+        "synthetic-session-000",
+        "synthetic-session-001",
+        "synthetic-session-002",
+        "synthetic-session-006",
+        "synthetic-session-008",
+        "synthetic-session-009",
+        "synthetic-session-011",
+        "synthetic-session-012",
+        "synthetic-session-013",
+        "synthetic-session-014",
+        "synthetic-session-015",
+        "synthetic-session-018"
+      ],
+      "validation": [
+        "synthetic-session-003",
+        "synthetic-session-005",
+        "synthetic-session-016",
+        "synthetic-session-017"
+      ],
+      "test": [
+        "synthetic-session-004",
+        "synthetic-session-007",
+        "synthetic-session-010",
+        "synthetic-session-019"
+      ]
+    },
+    "split_counts": {
+      "train": 144,
+      "validation": 48,
+      "test": 47
+    },
+    "split_excluded_counts": {
+      "train": 0,
+      "validation": 0,
+      "test": 1
+    },
+    "split_policy": "Entire virtual recording sessions; train60/validation20/test20 percent (minimum two validation/test sessions).",
+    "nuisance_policy": "Gain .45-.85, phase -180..180deg and delay13..80samples are drawn once per session and shared by every class; SNR24..34dB and nominal CFO+-2Hz shared per window. Nominal ADC rail4 provides headroom even for the low-SNR experiment.",
+    "impairments": {
+      "healthy": "nominal",
+      "frequency_offset": "abs(CFO)800..3800Hz",
+      "low_snr": "SNR0..9dB",
+      "clipping": "ADC rail .12.. .30"
+    },
+    "feature_boundary": "Only FEATURE_NAMES, measured from received samples, enter the model. Labels/settings/session IDs/seeds/metrics are excluded.",
+    "limitation": "Classifier scores condition on acquired captures with complete measured features. Failed acquisitions are recorded separately, never filled with fabricated features. Synthetic sessions share one simulator; performance is not hardware accuracy."
+  },
+  "model_path": "C:\\path\\to\\RF-Link-Lab\\artifacts\\model\\model.json",
+  "evaluation_path": "C:\\path\\to\\RF-Link-Lab\\artifacts\\model\\evaluation.json",
+  "feature_importance": {
+    "cfo_abs_hz": 0.13042430150710355,
+    "evm_pct": 0.20118150743376967,
+    "clipping_fraction": 0.12453789182868677,
+    "snr_est_db": 0.08076119733386852,
+    "amplitude_cv": 0.2169459208379371,
+    "spectral_flatness": 0.24614918105863443
+  },
+  "interpretation": "Both scores classify the same heldout virtual sessions before abstention. Similar or better rules performance is a valid outcome; no AI advantage is assumed.",
+  "limits": [
+    "One simple synthetic channel; no real hardware captures.",
+    "Four controlled single-impairment classes; not universal root-cause diagnosis.",
+    "Random forest support is not calibrated confidence.",
+    "Do not tune the model from these test results; create a new independent test set for later iterations."
+  ]
+}

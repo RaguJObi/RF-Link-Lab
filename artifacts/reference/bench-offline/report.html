@@ -1,0 +1,112 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Offline bench-session example — RF Link Lab</title>
+<style>body{margin:0;background:#0b1320;color:#e5edf6;font:16px/1.6 system-ui}main{max-width:1100px;margin:auto;padding:36px}h1{font-size:32px}h2{margin-top:36px}a{color:#45d5bd}pre,article{background:#101d2d;padding:18px;overflow-wrap:anywhere}pre{white-space:pre-wrap;font-size:13px}table{width:100%;border-collapse:collapse}td,th{text-align:left;border-bottom:1px solid #33465b;padding:10px}.tablewrap{overflow-x:auto}.warning{color:#ffca7a}time,.metrics span{color:#9aabc0}article{margin-bottom:16px}.metrics{display:flex;flex-wrap:wrap;gap:28px;margin:20px 0}.metrics div{min-width:130px}.metrics span,.metrics strong{display:block}.metrics strong{font-size:25px}details{margin:16px 0}summary{color:#45d5bd;cursor:pointer}@media(max-width:600px){main{padding:18px}h1{font-size:26px}}</style>
+<main><p>RF LINK LAB · BENCH SESSION · 0.2.1</p><h1>Offline bench-session example</h1>
+<p>Created UTC: 2026-10-18T23:23:27.775418+00:00<br>Finalized UTC: 2026-10-18T23:23:28.041479+00:00</p>
+<h2>Evidence boundary</h2><p>Source declarations are not authenticated. Operator checks are assertions, not automatic measurements. Offline UART and synthetic I/Q do not prove physical button operation, device identity, RF transmission, or RF performance. Attachment verifies and preserves existing files; no receiver or hardware runs.</p><p>A finalized session means its report and evidence inventory are sealed for change detection. It does not mean hardware checks passed. The JSON manifest itself is not signed.</p>
+<h2>Preserved recordings</h2><article><h3>UART recording</h3><p>Input source: <strong>offline_feed</strong> · File retention: complete</p><div class="metrics"><div><span>Valid packets</span><strong>6</strong></div><div><span>CRC rejected</span><strong>1</strong></div><div><span>Observed gaps</span><strong>1</strong></div><div><span>Observed input bytes</span><strong>134</strong></div></div><p>Duplicates: 1 · Out of order: 1 · Framing errors: 0 · UART stream failures: 0</p><p>Recorded UART source labels are declarations; parser success does not verify board identity or physical button operation.</p><details><summary>Full recorded metadata and connection history</summary><pre>{
+  &quot;bytes_received&quot;: 134,
+  &quot;crc_errors&quot;: 1,
+  &quot;discarded_bytes&quot;: 32,
+  &quot;duplicates&quot;: 1,
+  &quot;framing_errors&quot;: 0,
+  &quot;out_of_order&quot;: 1,
+  &quot;packets_ok&quot;: 6,
+  &quot;segment_count&quot;: 1,
+  &quot;segments_by_source&quot;: {
+    &quot;offline_feed&quot;: 1
+  },
+  &quot;sequence_gaps&quot;: 1,
+  &quot;sources&quot;: [
+    &quot;offline_feed&quot;
+  ]
+}</pre><p>Recording UTC: 2026-10-18T23:23:27.836720+00:00 → 2026-10-18T23:23:27.847264+00:00</p><p>Recording writer error: None</p><p>Connection attempts and stream errors (separate from file completeness; an attempted endpoint is not a verified board):</p><pre>{
+  &quot;stream_error_count&quot;: 0,
+  &quot;stream_errors&quot;: [],
+  &quot;stream_errors_truncated&quot;: false,
+  &quot;connection_attempt_count&quot;: 0,
+  &quot;connection_attempts&quot;: [],
+  &quot;connection_attempts_truncated&quot;: false
+}</pre><p>Parser configuration:</p><pre>{
+  &quot;read_size&quot;: 4096,
+  &quot;sequence_window&quot;: 1024
+}</pre></details><details><summary>Evidence files and SHA256 hashes</summary><ul><li><a href="uart/uart.json">uart/uart.json</a><br><small>1560 bytes · SHA256 5ed5669261f132e7346374ae125314bdd16a045f32f7ea6ade81f3a3a5652dd1</small></li><li><a href="uart/chunks.jsonl">uart/chunks.jsonl</a><br><small>3781 bytes · SHA256 0f46ebea4b40f79b28ebc4649855a6c7b526cef122dffff7f889488d06685e8c</small></li><li><a href="uart/packets.jsonl">uart/packets.jsonl</a><br><small>1068 bytes · SHA256 b898bc1f1b763253623b3d349c80f0aa33e444cb85ce2d2854d694d2226f130c</small></li><li><a href="uart/raw.bin">uart/raw.bin</a><br><small>134 bytes · SHA256 c1c868fa0a156b7bf472c4c4fe971c77a3131bc025371b9c65b7a12faeba4400</small></li></ul></details></article><article><h3>IQ recording</h3><p>Declared I/Q origin: <strong>synthetic</strong></p><div class="metrics"><div><span>Recorded valid packets</span><strong>3</strong></div><div><span>Recorded BER</span><strong>0.0</strong></div><div><span>Recorded reference EVM (%)</span><strong>5.30888524103467</strong></div></div><p>Stored metadata and measurements only; attaching does not rerun the receiver or establish physical RF acquisition.</p><details><summary>Full recorded metadata and connection history</summary><pre>{
+  &quot;format&quot;: &quot;saved_run&quot;,
+  &quot;declared_origin&quot;: &quot;synthetic&quot;,
+  &quot;processing&quot;: &quot;synthetic&quot;,
+  &quot;metadata&quot;: {
+    &quot;waveform_format&quot;: &quot;rf-link-lab-qpsk-telemetry-v1&quot;,
+    &quot;sample_rate&quot;: 200000,
+    &quot;samples_per_symbol&quot;: 4,
+    &quot;symbol_rate&quot;: 50000.0,
+    &quot;expected_frames&quot;: 3,
+    &quot;source&quot;: &quot;generated telemetry waveform&quot;,
+    &quot;correct_cfo&quot;: true,
+    &quot;provenance&quot;: &quot;synthetic&quot;
+  },
+  &quot;config&quot;: {
+    &quot;seed&quot;: 42,
+    &quot;frames&quot;: 3,
+    &quot;snr_db&quot;: 24,
+    &quot;cfo_hz&quot;: 0,
+    &quot;gain&quot;: 0.65,
+    &quot;clip_level&quot;: 1.0,
+    &quot;sample_rate&quot;: 200000,
+    &quot;samples_per_symbol&quot;: 4,
+    &quot;phase_deg&quot;: 15,
+    &quot;delay_samples&quot;: 37,
+    &quot;correct_cfo&quot;: true
+  },
+  &quot;recorded_metrics&quot;: {
+    &quot;status&quot;: &quot;decoded&quot;,
+    &quot;acquisition_valid&quot;: true,
+    &quot;synchronization_valid&quot;: true,
+    &quot;reference_available&quot;: true,
+    &quot;benchmark_alignment_valid&quot;: true,
+    &quot;ber&quot;: 0.0,
+    &quot;bit_errors&quot;: 0,
+    &quot;bits_total&quot;: 408,
+    &quot;bits_compared&quot;: 408,
+    &quot;bits_erased&quot;: 0,
+    &quot;frames_lost&quot;: 0,
+    &quot;frames_expected&quot;: 3,
+    &quot;evm_pct&quot;: 5.30888524103467,
+    &quot;reference_evm_pct&quot;: 5.30888524103467,
+    &quot;pilot_evm_pct&quot;: 4.764107993634192,
+    &quot;packet_success_rate&quot;: 1.0,
+    &quot;packets_ok&quot;: 3,
+    &quot;packets_total&quot;: 3,
+    &quot;crc_rejected_candidates&quot;: 0,
+    &quot;decoded_bytes&quot;: 54,
+    &quot;cfo_est_hz&quot;: -0.03120568569635467,
+    &quot;clipping_fraction&quot;: 0.0,
+    &quot;snr_est_db&quot;: 20.101542888424188,
+    &quot;sync_score&quot;: 0.9988670918847014,
+    &quot;cfo_correction_enabled&quot;: true,
+    &quot;sample_count&quot;: 1578
+  },
+  &quot;capture_sha256&quot;: &quot;31037b0fdd9ab2da4bc7d5d7b768d0e130dc7cbadd77bb3e21c04de67290aafa&quot;
+}</pre></details><details><summary>Evidence files and SHA256 hashes</summary><ul><li><a href="synthetic-iq/run.json">synthetic-iq/run.json</a><br><small>2555 bytes · SHA256 ed2df7005d6cc2285fa7aab5039794ae7dcdaef7bb02095aae38655e4a91d209</small></li><li><a href="synthetic-iq/capture.npz">synthetic-iq/capture.npz</a><br><small>46889 bytes · SHA256 31037b0fdd9ab2da4bc7d5d7b768d0e130dc7cbadd77bb3e21c04de67290aafa</small></li></ul></details></article>
+<h2>Operator checks</h2><div class="tablewrap"><table><tr><th>Check</th><th>Status</th><th>Origin</th><th>Details</th></tr><tr><td>ubuntu execution</td><td>NOT_ATTEMPTED</td><td>default_not_attempted</td><td>—</td></tr><tr><td>nucleo identity</td><td>NOT_ATTEMPTED</td><td>default_not_attempted</td><td>—</td></tr><tr><td>firmware flash</td><td>NOT_ATTEMPTED</td><td>default_not_attempted</td><td>—</td></tr><tr><td>uart button response</td><td>NOT_ATTEMPTED</td><td>default_not_attempted</td><td>—</td></tr><tr><td>bladerf identification</td><td>NOT_ATTEMPTED</td><td>default_not_attempted</td><td>—</td></tr><tr><td>bladerf rx capture</td><td>NOT_ATTEMPTED</td><td>default_not_attempted</td><td>—</td></tr><tr><td>conducted rf link</td><td>NOT_ATTEMPTED</td><td>default_not_attempted</td><td>—</td></tr><tr><td>offline parser and bundle example</td><td>PASSED</td><td>operator_entered</td><td>Software example created; hardware checks remain NOT_ATTEMPTED.</td></tr></table></div>
+<h2>Operator notes</h2><p><time>2026-10-18T23:23:27.831189+00:00</time> — Software-only demonstration. No serial device, USB probe or RF acquisition was used.</p><details><summary>Computer environment</summary><pre>{
+  &quot;os&quot;: &quot;Windows-11-10.0.26300-SP0&quot;,
+  &quot;architecture&quot;: &quot;AMD64&quot;,
+  &quot;python&quot;: &quot;3.12.14&quot;,
+  &quot;operator_environment&quot;: {}
+}</pre></details><details><summary>Local firmware and model identity</summary><pre>{
+  &quot;firmware&quot;: {
+    &quot;available&quot;: true,
+    &quot;scope&quot;: &quot;local resource identity; use on a board/run is not established&quot;,
+    &quot;size_bytes&quot;: 1352,
+    &quot;sha256&quot;: &quot;636d701ff7140d075b9d69d265504bf9cf352a393bb4b4b8d8e8a8bb92e0cdf2&quot;,
+    &quot;filename&quot;: &quot;rf_link_lab_f446re.bin&quot;
+  },
+  &quot;model&quot;: {
+    &quot;available&quot;: true,
+    &quot;scope&quot;: &quot;local resource identity; use on a board/run is not established&quot;,
+    &quot;size_bytes&quot;: 116325,
+    &quot;sha256&quot;: &quot;1aa00e850215c368cee75c1e33361670e4f430fcdff145cb703dcd9448d0fa71&quot;,
+    &quot;filename&quot;: &quot;model.json&quot;
+  }
+}</pre></details>
+<details><summary>Submitted device probe results</summary><pre>[]</pre></details>
+<h2>Integrity and portability</h2><p>The adjacent bench.json lists SHA256 and byte counts for every linked evidence file, this report, and <a href="events.jsonl">events.jsonl</a>. Copy the complete session folder. Verification checks stored bytes and metadata without replaying the receiver or opening devices.</p></main></html>

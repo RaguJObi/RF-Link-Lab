@@ -1,0 +1,25 @@
+{
+  "schema": "rf-link-lab.duplex-rehearsal-rx.v1",
+  "source": "synthetic_duplex_rehearsal",
+  "file": "rx.sc16q11",
+  "format": "SC16Q11_LE",
+  "sample_rate": 1000000,
+  "symbol_rate": 50000,
+  "samples": 69705,
+  "bytes": 278820,
+  "sha256": "7088b9046a2a099196827225ddcb5c835e3e7c5985eff46b42ffe5b7662b8d51",
+  "requested": {
+    "sample_rate": 1000000
+  },
+  "rf_transmitted": false,
+  "hardware_accessed": false,
+  "channel": {
+    "snr_db": 30,
+    "cfo_hz": 300,
+    "amplitude": 0.8,
+    "phase_rad": 0.2,
+    "delay_samples": 10000,
+    "seed": 3102026
+  },
+  "scope": "Software channel applied to saved quantized TX bytes; no radio or serial port opened."
+}

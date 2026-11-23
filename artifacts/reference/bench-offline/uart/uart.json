@@ -1,0 +1,60 @@
+{
+  "bytes_written": 134,
+  "complete": true,
+  "connection_attempt_count": 0,
+  "connection_attempts": [],
+  "connection_attempts_truncated": false,
+  "ended_utc": "2026-10-18T23:23:27.847264+00:00",
+  "events_written": 29,
+  "evidence": "Host UART receipt; source labels are provenance, not device authentication or RF proof.",
+  "files": {
+    "chunks": {
+      "path": "chunks.jsonl",
+      "sha256": "0f46ebea4b40f79b28ebc4649855a6c7b526cef122dffff7f889488d06685e8c",
+      "size_bytes": 3781
+    },
+    "packets": {
+      "path": "packets.jsonl",
+      "sha256": "b898bc1f1b763253623b3d349c80f0aa33e444cb85ce2d2854d694d2226f130c",
+      "size_bytes": 1068
+    },
+    "raw": {
+      "path": "raw.bin",
+      "sha256": "c1c868fa0a156b7bf472c4c4fe971c77a3131bc025371b9c65b7a12faeba4400",
+      "size_bytes": 134
+    }
+  },
+  "last_error": null,
+  "limits": {
+    "max_events": 1000000,
+    "max_raw_bytes": 67108864
+  },
+  "packets_written": 6,
+  "parser_config": {
+    "read_size": 4096,
+    "sequence_window": 1024
+  },
+  "schema": "rf-link-lab-uart-v1",
+  "started_utc": "2026-10-18T23:23:27.836720+00:00",
+  "status": "complete",
+  "stream_error_count": 0,
+  "stream_errors": [],
+  "stream_errors_truncated": false,
+  "summary": {
+    "bytes_received": 134,
+    "crc_errors": 1,
+    "discarded_bytes": 32,
+    "duplicates": 1,
+    "framing_errors": 0,
+    "out_of_order": 1,
+    "packets_ok": 6,
+    "segment_count": 1,
+    "segments_by_source": {
+      "offline_feed": 1
+    },
+    "sequence_gaps": 1,
+    "sources": [
+      "offline_feed"
+    ]
+  }
+}

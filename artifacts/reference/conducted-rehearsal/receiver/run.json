@@ -1,0 +1,258 @@
+{
+  "schema": "rf-link-lab-run-v2",
+  "provenance": "known_payload_offline_decode",
+  "created_utc": "2026-10-19T08:34:17.643750+00:00",
+  "application_version": "0.3.0",
+  "python_version": "3.12.14",
+  "config": {
+    "sample_rate": 200000,
+    "symbol_rate": 50000.0,
+    "correct_cfo": true,
+    "source_path": "C:\\path\\to\\RF-Link-Lab\\artifacts\\reference\\conducted-rehearsal\\rehearsal\\rx.sc16q11",
+    "source_provenance": "synthetic_duplex_rehearsal",
+    "original_origin": "synthetic_duplex_rehearsal",
+    "capture_sidecar": {
+      "schema": "rf-link-lab.duplex-rehearsal-rx.v1",
+      "source": "synthetic_duplex_rehearsal",
+      "file": "rx.sc16q11",
+      "format": "SC16Q11_LE",
+      "sample_rate": 1000000,
+      "symbol_rate": 50000,
+      "samples": 69705,
+      "bytes": 278820,
+      "sha256": "7088b9046a2a099196827225ddcb5c835e3e7c5985eff46b42ffe5b7662b8d51",
+      "requested": {
+        "sample_rate": 1000000
+      },
+      "rf_transmitted": false,
+      "hardware_accessed": false,
+      "channel": {
+        "snr_db": 30,
+        "cfo_hz": 300,
+        "amplitude": 0.8,
+        "phase_rad": 0.2,
+        "delay_samples": 10000,
+        "seed": 3102026
+      },
+      "scope": "Software channel applied to saved quantized TX bytes; no radio or serial port opened."
+    },
+    "sha256_verified": true,
+    "sampling_rate_source": "user_or_requested_settings; inspect actual hardware readback",
+    "capture_sha256": "7088b9046a2a099196827225ddcb5c835e3e7c5985eff46b42ffe5b7662b8d51",
+    "capture_sample_rate": 1000000,
+    "source_sample_rate": 1000000,
+    "samples_per_symbol": 4,
+    "resampling": {
+      "method": "scipy.signal.resample_poly",
+      "up": 1,
+      "down": 5,
+      "input_samples": 69705,
+      "output_samples": 13941
+    },
+    "provenance": "known_payload_offline_decode",
+    "reference_requested": false,
+    "waveform_format": "rf-link-lab-qpsk-telemetry-v1",
+    "expected_frames": 12,
+    "known_payload_comparison": true,
+    "tx_manifest_path": "C:\\path\\to\\RF-Link-Lab\\artifacts\\reference\\conducted-rehearsal\\tx\\tx.json",
+    "tx_sha256": "2d0833a333b3ea7314e109e4d86a1a26591856534b6bedb076b7ca24fdc3310d",
+    "reference_note": "TX I/Q is the exact quantized stream. Payload symbols are its independently acquired normalized decisions; bits are the encoded expected payload.",
+    "known_payload_missing_frames": [],
+    "known_payload_unexpected_frames": [],
+    "experiment_mode": "rehearsal",
+    "payload_source": {
+      "source": "offline_example_payload"
+    },
+    "diagnosis_allowed": false,
+    "experiment_manifest": "experiment.json",
+    "rf_transmitted": false,
+    "rf_transmission_requested": false,
+    "rf_success": "not_applicable"
+  },
+  "metadata": {
+    "sample_rate": 200000,
+    "symbol_rate": 50000.0,
+    "correct_cfo": true,
+    "source_path": "C:\\path\\to\\RF-Link-Lab\\artifacts\\reference\\conducted-rehearsal\\rehearsal\\rx.sc16q11",
+    "source_provenance": "synthetic_duplex_rehearsal",
+    "original_origin": "synthetic_duplex_rehearsal",
+    "capture_sidecar": {
+      "schema": "rf-link-lab.duplex-rehearsal-rx.v1",
+      "source": "synthetic_duplex_rehearsal",
+      "file": "rx.sc16q11",
+      "format": "SC16Q11_LE",
+      "sample_rate": 1000000,
+      "symbol_rate": 50000,
+      "samples": 69705,
+      "bytes": 278820,
+      "sha256": "7088b9046a2a099196827225ddcb5c835e3e7c5985eff46b42ffe5b7662b8d51",
+      "requested": {
+        "sample_rate": 1000000
+      },
+      "rf_transmitted": false,
+      "hardware_accessed": false,
+      "channel": {
+        "snr_db": 30,
+        "cfo_hz": 300,
+        "amplitude": 0.8,
+        "phase_rad": 0.2,
+        "delay_samples": 10000,
+        "seed": 3102026
+      },
+      "scope": "Software channel applied to saved quantized TX bytes; no radio or serial port opened."
+    },
+    "sha256_verified": true,
+    "sampling_rate_source": "user_or_requested_settings; inspect actual hardware readback",
+    "capture_sha256": "7088b9046a2a099196827225ddcb5c835e3e7c5985eff46b42ffe5b7662b8d51",
+    "capture_sample_rate": 1000000,
+    "source_sample_rate": 1000000,
+    "samples_per_symbol": 4,
+    "resampling": {
+      "method": "scipy.signal.resample_poly",
+      "up": 1,
+      "down": 5,
+      "input_samples": 69705,
+      "output_samples": 13941
+    },
+    "provenance": "known_payload_offline_decode",
+    "reference_requested": false,
+    "waveform_format": "rf-link-lab-qpsk-telemetry-v1",
+    "expected_frames": 12,
+    "known_payload_comparison": true,
+    "tx_manifest_path": "C:\\path\\to\\RF-Link-Lab\\artifacts\\reference\\conducted-rehearsal\\tx\\tx.json",
+    "tx_sha256": "2d0833a333b3ea7314e109e4d86a1a26591856534b6bedb076b7ca24fdc3310d",
+    "reference_note": "TX I/Q is the exact quantized stream. Payload symbols are its independently acquired normalized decisions; bits are the encoded expected payload.",
+    "known_payload_missing_frames": [],
+    "known_payload_unexpected_frames": [],
+    "experiment_mode": "rehearsal",
+    "payload_source": {
+      "source": "offline_example_payload"
+    },
+    "diagnosis_allowed": false,
+    "experiment_manifest": "experiment.json",
+    "rf_transmitted": false,
+    "rf_transmission_requested": false,
+    "rf_success": "not_applicable"
+  },
+  "metrics": {
+    "status": "decoded",
+    "acquisition_valid": true,
+    "synchronization_valid": true,
+    "reference_available": true,
+    "benchmark_alignment_valid": true,
+    "ber": 0.0,
+    "bit_errors": 0,
+    "bits_total": 1632,
+    "bits_compared": 1632,
+    "bits_erased": 0,
+    "frames_lost": 0,
+    "frames_expected": 12,
+    "evm_pct": 1.0316905206429516,
+    "reference_evm_pct": 1.0316905206429516,
+    "pilot_evm_pct": 1.0872138649134855,
+    "packet_success_rate": 1.0,
+    "packets_ok": 12,
+    "packets_total": 12,
+    "crc_rejected_candidates": 0,
+    "decoded_bytes": 579,
+    "cfo_est_hz": 299.91595919977885,
+    "clipping_fraction": 0.0,
+    "snr_est_db": 34.58769612965958,
+    "sync_score": 0.999940903539597,
+    "cfo_correction_enabled": true,
+    "sample_count": 13941,
+    "known_payload_frames_matched": 12,
+    "known_payload_frames_missing": 0,
+    "known_payload_frames_unexpected": 0,
+    "known_payload_duplicate_frames": 0,
+    "known_payload_complete": true,
+    "compared_bit_error_rate": 0.0,
+    "ber_scope": "complete_aligned_known_payload"
+  },
+  "features": {
+    "cfo_abs_hz": 299.91595919977885,
+    "evm_pct": 1.0316905206429516,
+    "clipping_fraction": 0.0,
+    "snr_est_db": 34.58769612965958,
+    "amplitude_cv": 1.2968139156540182,
+    "spectral_flatness": 0.35623105567670366
+  },
+  "telemetry": [
+    {
+      "sequence": 0,
+      "uptime_ms": 1000,
+      "button": false,
+      "crc_ok": true
+    },
+    {
+      "sequence": 1,
+      "uptime_ms": 1100,
+      "button": true,
+      "crc_ok": true
+    },
+    {
+      "sequence": 2,
+      "uptime_ms": 1200,
+      "button": false,
+      "crc_ok": true
+    },
+    {
+      "sequence": 3,
+      "uptime_ms": 1300,
+      "button": true,
+      "crc_ok": true
+    },
+    {
+      "sequence": 4,
+      "uptime_ms": 1400,
+      "button": false,
+      "crc_ok": true
+    },
+    {
+      "sequence": 5,
+      "uptime_ms": 1500,
+      "button": true,
+      "crc_ok": true
+    },
+    {
+      "sequence": 6,
+      "uptime_ms": 1600,
+      "button": false,
+      "crc_ok": true
+    },
+    {
+      "sequence": 7,
+      "uptime_ms": 1700,
+      "button": true,
+      "crc_ok": true
+    },
+    {
+      "sequence": 8,
+      "uptime_ms": 1800,
+      "button": false,
+      "crc_ok": true
+    },
+    {
+      "sequence": 9,
+      "uptime_ms": 1900,
+      "button": true,
+      "crc_ok": true
+    },
+    {
+      "sequence": 10,
+      "uptime_ms": 2000,
+      "button": false,
+      "crc_ok": true
+    },
+    {
+      "sequence": 11,
+      "uptime_ms": 2100,
+      "button": true,
+      "crc_ok": true
+    }
+  ],
+  "diagnosis": null,
+  "capture_sha256": "356ee20fb8011c2a6c73a4cc77099cabfb46de757428fee181fe3a24c7277e0c",
+  "replay_scope": "Verify and display stored waveform and recorded metrics; receiver metrics are not recomputed on load.",
+  "limits": "Origin is declared by source metadata. No calibrated sensitivity, independent radios or standards conformance is established."
+}

@@ -1,0 +1,6 @@
+{"button": false, "received_utc": "2026-10-18T23:23:27.842735+00:00", "sequence": 10, "sequence_status": "first", "session_id": 2, "source": "offline_feed", "uptime_ms": 1000}
+{"button": true, "received_utc": "2026-10-18T23:23:27.842735+00:00", "sequence": 11, "sequence_status": "in_order", "session_id": 2, "source": "offline_feed", "uptime_ms": 1100}
+{"button": true, "received_utc": "2026-10-18T23:23:27.842735+00:00", "sequence": 13, "sequence_status": "gap", "session_id": 2, "source": "offline_feed", "uptime_ms": 1300}
+{"button": false, "received_utc": "2026-10-18T23:23:27.842735+00:00", "sequence": 12, "sequence_status": "out_of_order", "session_id": 2, "source": "offline_feed", "uptime_ms": 1200}
+{"button": true, "received_utc": "2026-10-18T23:23:27.844246+00:00", "sequence": 13, "sequence_status": "duplicate", "session_id": 2, "source": "offline_feed", "uptime_ms": 1300}
+{"button": false, "received_utc": "2026-10-18T23:23:27.844246+00:00", "sequence": 14, "sequence_status": "in_order", "session_id": 2, "source": "offline_feed", "uptime_ms": 1400}
